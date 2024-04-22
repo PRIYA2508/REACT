@@ -14,8 +14,8 @@
         <h1>not render</h1>
     </div>
     <div id="footer">
-        <h1 id="title1">footer1</h1>
-        <h2 id="title">footer2 </h2>
+        <h1>footer1</h1>
+        <h2>footer2 </h2>
     </div>
 
     <script>
@@ -26,8 +26,8 @@
         console.log(create);
         // ReactDOM.render(create,document.getElementById("root"));
 
-        const fot = React.createElement("h1", {id:"title1"}, "foote 1");
-        const fot1 = React.createElement("h2",{id:"title"},"foote 2");
+        const fot = React.createElement("h1", {}, "foote 1");
+        const fot1 = React.createElement("h2",{},"foote 2");
 
         const footer = React.createElement("div",{id:"footer"},[fot,fot1]);
         const root1 = ReactDOM.createRoot(document.getElementById("footer"));
