@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how react works</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+   
+    <div id="header"><h1>buddhu</h1></div>
+    <div id="root">
+        <h1>not render</h1>
+    </div>
+    <div id="footer">
+        <h1 id="title1">footer1</h1>
+        <h2 id="title">footer2 </h2>
+    </div>
+
+    <script>
+        const create = React.createElement("h1",{id:"root"},"RAM RAM JI");
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(create);
+        
+        console.log(create);
+        // ReactDOM.render(create,document.getElementById("root"));
+
+        const fot = React.createElement("h1", {id:"title1"}, "foote 1");
+        const fot1 = React.createElement("h2",{id:"title"},"foote 2");
+
+        const footer = React.createElement("div",{id:"footer"},[fot,fot1]);
+        const root1 = ReactDOM.createRoot(document.getElementById("footer"));
+        root1.render(footer);
+    </script>
+
+   
+</body>
+</html>
